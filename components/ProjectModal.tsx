@@ -244,6 +244,10 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                                 alt={caption ?? `${p.title} screenshot`}
                                 className="block h-auto w-[min(48%,280px)] rounded-xl border border-[#E5E5E5]"
                                 loading="lazy"
+                                decoding="async"
+                                onError={(e) => {
+                                  e.currentTarget.style.display = "none";
+                                }}
                               />
                             ))}
                           </div>
@@ -255,6 +259,10 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                               alt={caption ?? `${p.title} screenshot`}
                               className="block h-auto w-full object-contain rounded-xl"
                               loading="lazy"
+                              decoding="async"
+                              onError={(e) => {
+                                e.currentTarget.style.display = "none";
+                              }}
                             />
                           </div>
                         )}

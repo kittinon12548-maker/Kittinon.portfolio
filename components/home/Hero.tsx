@@ -60,6 +60,8 @@ export default function Hero() {
                 alt={`ภาพของ ${profile.nameTh}`}
                 className="h-full w-auto object-contain object-bottom select-none"
                 draggable={false}
+                decoding="async"
+                loading="eager"
               />
             </div>
           </div>
