@@ -25,7 +25,7 @@ export default function AboutStory() {
             <span className="text-[13px] font-semibold uppercase tracking-wider text-[#111111]">
               เป้าหมายการฝึกงาน
             </span>
-            <p className="mt-3 text-[16px] leading-[1.6] text-[#6B6B6B]">
+            <p className="mt-3 text-[16px] leading-[1.6] text-[#525252]">
               {about.storySub}
             </p>
           </div>
@@ -35,7 +35,7 @@ export default function AboutStory() {
         <dl className="mt-16 grid gap-6 border-t border-[#E5E5E5] pt-10 sm:grid-cols-2 lg:grid-cols-4">
           {about.facts.map((f) => (
             <div key={f.label} className="rounded-2xl border border-[#E5E5E5] bg-white p-6">
-              <dt className="text-[13px] text-[#6B6B6B] font-medium">{f.label}</dt>
+              <dt className="text-[13px] text-[#525252] font-medium">{f.label}</dt>
               <dd className="mt-2 text-[16px] leading-snug font-semibold text-[#111111]">{f.value}</dd>
             </div>
           ))}

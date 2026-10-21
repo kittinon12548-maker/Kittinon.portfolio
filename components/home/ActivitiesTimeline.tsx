@@ -41,7 +41,7 @@ export default function ActivitiesTimeline() {
                 </h3>
 
                 {a.detail && (
-                  <p className="mt-2.5 text-sm sm:text-[15px] leading-[1.6] text-[#6B6B6B]">
+                  <p className="mt-2.5 text-sm sm:text-[15px] leading-[1.6] text-[#525252]">
                     {a.detail}
                   </p>
                 )}

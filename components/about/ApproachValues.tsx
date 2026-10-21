@@ -20,7 +20,7 @@ export default function ApproachValues() {
           </span>
           <ul className="mt-6 divide-y divide-[#E5E5E5] border-y border-[#E5E5E5]">
             {about.values.map((v) => (
-              <li key={v} className="py-6 text-[16px] leading-[1.6] text-[#6B6B6B]">
+              <li key={v} className="py-6 text-[16px] leading-[1.6] text-[#525252]">
                 <Highlight text={v} className="text-[#111111] font-medium" />
               </li>
             ))}

@@ -10,7 +10,7 @@ export default function Services() {
           <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
             {about.servicesHeading}
           </h2>
-          <p className="mt-3 text-[16px] leading-[1.6] text-[#6B6B6B] max-w-xl">
+          <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
             ความเชี่ยวชาญและเครื่องมือที่นำมาปรับใช้เพื่อตอบโจทย์องค์กร
           </p>
         </div>
@@ -19,9 +19,9 @@ export default function Services() {
           {about.services.map((s, i) => (
             <article key={s.title} className="flex flex-col justify-between rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-colors hover:border-[#CCCCCC]">
               <div>
-                <p className="text-[13px] font-mono font-semibold text-[#6B6B6B]">{String(i + 1).padStart(2, "0")}</p>
+                <p className="text-[13px] font-mono font-semibold text-[#525252]">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-3 text-xl font-semibold tracking-tight text-[#111111]">{s.title}</h3>
-                <p className="mt-3 text-sm leading-[1.6] text-[#6B6B6B]">{s.body}</p>
+                <p className="mt-3 text-sm leading-[1.6] text-[#525252]">{s.body}</p>
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#E5E5E5]">
