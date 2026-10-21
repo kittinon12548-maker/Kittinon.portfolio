@@ -11,7 +11,6 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
   const closeRef = useRef<HTMLButtonElement>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
-  const [infoTop, setInfoTop] = useState(0);
   const open = project !== null;
 
   useEffect(() => {
@@ -38,19 +37,6 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-
-  useEffect(() => {
-    const sheet = sheetRef.current;
-    const info = infoRef.current;
-    if (!sheet || !info) return;
-    const BOTTOM_GAP = 24;
-    const update = () => setInfoTop(Math.min(0, sheet.clientHeight - info.offsetHeight - BOTTOM_GAP * 2));
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(sheet);
-    ro.observe(info);
-    return () => ro.disconnect();
-  }, [shown, mounted]);
 
   const p = shown;
   if (!mounted) return null;
@@ -91,18 +77,18 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
         }`}
       >
         {p && (
-          <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-6xl pb-24">
             <div className="grid gap-12 lg:grid-cols-[1fr_1.8fr] lg:gap-14">
-              {/* Left Column: Project Overview & Specs (Sticky) */}
-              <div ref={infoRef} className="lg:sticky lg:self-start space-y-8" style={{ top: infoTop }}>
+              {/* Left Column: Project Overview & Specs */}
+              <div ref={infoRef} className="space-y-8 lg:self-start">
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] font-medium text-[#111111]">
                       {p.category}
                     </span>
-                    {p.award && (
-                      <span className="rounded-full border border-[#111111] bg-[#111111] px-3 py-1 text-[13px] font-medium text-white">
-                        {p.award}
+                    {p.year && (
+                      <span className="rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3 py-1 font-mono text-[12px] text-[#6B6B6B]">
+                        ปี {p.year}
                       </span>
                     )}
                   </div>
@@ -110,11 +96,25 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                   <h2 id="project-title" className="text-2xl sm:text-3xl font-bold tracking-tight text-[#111111] leading-tight">
                     {p.title}
                   </h2>
-                  <p className="mt-1 text-sm text-[#6B6B6B]">{p.subtitle}</p>
+                  <p className="mt-1 text-sm text-[#6B6B6B] leading-relaxed">{p.subtitle}</p>
 
+                  {/* Award Recognition Box */}
+                  {p.award && (
+                    <div className="mt-4 rounded-xl border border-[#111111] bg-[#111111] p-4 text-white shadow-sm">
+                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                        <span aria-hidden>🏆</span>
+                        <span>รางวัลและเกียรติประวัติ</span>
+                      </div>
+                      <p className="text-[14px] leading-relaxed text-white">
+                        {p.award}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Key Metric */}
                   {p.metric && (
-                    <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3.5 py-1.5 text-[13px] font-semibold text-[#111111]">
-                      <span className="size-1.5 rounded-full bg-[#111111]" />
+                    <div className="mt-3.5 flex items-start gap-2.5 rounded-xl border border-[#E5E5E5] bg-[#F5F5F5] px-3.5 py-2 text-[13px] font-medium text-[#111111] leading-relaxed">
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#111111]" />
                       <span>{p.metric}</span>
                     </div>
                   )}
