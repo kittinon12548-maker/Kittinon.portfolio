@@ -1,4 +1,4 @@
-"use client";
+import { Badge, SectionHeader } from "@/components/ui";
 
 export default function SkillsSection() {
   const domains = [
@@ -32,14 +32,10 @@ export default function SkillsSection() {
     <section id="skills" className="w-full bg-white py-[120px] scroll-mt-20 border-b border-[#E5E5E5]">
       <div className="mx-auto max-w-[1200px] px-6">
         {/* Section Header */}
-        <div className="pb-12">
-          <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
-            ทักษะและความเชี่ยวชาญ
-          </h2>
-          <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
-            บูรณาการการวิเคราะห์ข้อมูลเชิงลึก (Data Analytics) โมเดลปัญญาประดิษฐ์ (Machine Learning) และการสื่อสารข้อมูล
-          </p>
-        </div>
+        <SectionHeader
+          title="ทักษะและความเชี่ยวชาญ"
+          subtitle="บูรณาการการวิเคราะห์ข้อมูลเชิงลึก (Data Analytics) โมเดลปัญญาประดิษฐ์ (Machine Learning) และการสื่อสารข้อมูล"
+        />
 
         {/* 3 Domain Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -61,12 +57,7 @@ export default function SkillsSection() {
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {d.tools.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] text-[#111111]"
-                    >
-                      {t}
-                    </span>
+                    <Badge key={t} variant="ink">{t}</Badge>
                   ))}
                 </div>
               </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { projects, type Project } from "@/data/portfolio";
 import ProjectCover from "../ProjectCover";
 import ProjectModal from "../ProjectModal";
+import { Badge } from "@/components/ui";
 
 export default function WorksGrid() {
   const [selected, setSelected] = useState<Project | null>(null);
@@ -51,16 +52,9 @@ export default function WorksGrid() {
                   </div>
 
                   <div className="mt-6 flex flex-wrap gap-1.5 pt-4 border-t border-[#E5E5E5]">
-                    <span className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] font-medium text-[#111111]">
-                      {p.role}
-                    </span>
+                    <Badge variant="ink">{p.role}</Badge>
                     {p.tech.slice(0, 2).map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] text-[#525252]"
-                      >
-                        {t}
-                      </span>
+                      <Badge key={t} variant="default">{t}</Badge>
                     ))}
                   </div>
                 </div>

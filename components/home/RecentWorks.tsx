@@ -5,6 +5,7 @@ import Link from "next/link";
 import { projects, type Project } from "@/data/portfolio";
 import dynamic from "next/dynamic";
 import ProjectCover from "../ProjectCover";
+import { Badge, SectionHeader } from "@/components/ui";
 
 const ProjectModal = dynamic(() => import("../ProjectModal"), { ssr: false });
 
@@ -15,24 +16,19 @@ export default function RecentWorks() {
     <section id="projects" className="w-full bg-white py-[120px] scroll-mt-20 border-b border-[#E5E5E5]">
       <div className="mx-auto max-w-[1200px] px-6">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-12">
-          <div>
-            <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
-              ผลงานเด่น
-            </h2>
-            <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
-              โครงการวิเคราะห์ข้อมูล แดชบอร์ดเชิงโต้ตอบ และโมเดลปัญญาประดิษฐ์ที่พัฒนาขึ้นจริง
-            </p>
-          </div>
-
-          <Link
-            href="/works"
-            className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wider text-[#111111] hover:text-[#525252] transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-1"
-          >
-            <span>ดูทั้งหมด <span className="tabular-nums font-mono">[{projects.length}]</span></span>
-            <span className="text-sm">↗</span>
-          </Link>
-        </div>
+        <SectionHeader
+          title="ผลงานเด่น"
+          subtitle="โครงการวิเคราะห์ข้อมูล แดชบอร์ดเชิงโต้ตอบ และโมเดลปัญญาประดิษฐ์ที่พัฒนาขึ้นจริง"
+          action={
+            <Link
+              href="/works"
+              className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wider text-[#111111] hover:text-[#525252] transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-1"
+            >
+              <span>ดูทั้งหมด <span className="tabular-nums font-mono">[{projects.length}]</span></span>
+              <span className="text-sm">↗</span>
+            </Link>
+          }
+        />
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -72,21 +68,14 @@ export default function RecentWorks() {
 
                 {/* Tech Pills */}
                 <div className="mt-6 flex flex-wrap gap-1.5 pt-4 border-t border-[#E5E5E5]">
-                  <span className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] font-medium text-[#111111]">
-                    {project.role}
-                  </span>
+                  <Badge variant="ink">{project.role}</Badge>
                   {project.tech.slice(0, 2).map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] text-[#525252]"
-                    >
-                      {t}
-                    </span>
+                    <Badge key={t} variant="default">{t}</Badge>
                   ))}
                   {project.tech.length > 2 && (
-                    <span className="rounded-full border border-[#E5E5E5] bg-white px-2.5 py-1 text-[13px] text-[#525252] tabular-nums">
+                    <Badge variant="default" className="tabular-nums">
                       +{project.tech.length - 2}
-                    </span>
+                    </Badge>
                   )}
                 </div>
               </div>

@@ -1,19 +1,15 @@
-"use client";
-
 import { about } from "@/data/portfolio";
+import { Badge, SectionHeader } from "@/components/ui";
 
 export default function Services() {
   return (
     <section className="w-full bg-white px-6 py-[120px] text-[#111111] border-b border-[#E5E5E5]">
       <div className="max-w-[1200px] mx-auto w-full">
-        <div className="pb-12">
-          <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
-            {about.servicesHeading}
-          </h2>
-          <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
-            ความเชี่ยวชาญและเครื่องมือที่นำมาปรับใช้เพื่อตอบโจทย์องค์กร
-          </p>
-        </div>
+        {/* Section Header */}
+        <SectionHeader
+          title={about.servicesHeading}
+          subtitle="ความเชี่ยวชาญและเครื่องมือที่นำมาปรับใช้เพื่อตอบโจทย์องค์กร"
+        />
 
         <div className="grid gap-6 md:grid-cols-3 lg:gap-8">
           {about.services.map((s, i) => (
@@ -27,12 +23,7 @@ export default function Services() {
               <div className="mt-8 pt-6 border-t border-[#E5E5E5]">
                 <div className="flex flex-wrap gap-1.5">
                   {s.tools.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] text-[#111111]"
-                    >
-                      {t}
-                    </span>
+                    <Badge key={t} variant="ink">{t}</Badge>
                   ))}
                 </div>
               </div>

@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { imageSrc, type Project } from "@/data/portfolio";
 import { getLenis } from "@/lib/scroll";
 import ProjectCover from "./ProjectCover";
+import { Badge } from "@/components/ui";
 
 export default function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
   const [shown, setShown] = useState<Project | null>(project);
@@ -115,14 +116,8 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
               <div ref={infoRef} className="space-y-8 lg:self-start min-w-0">
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] font-medium text-[#111111]">
-                      {p.category}
-                    </span>
-                    {p.year && (
-                      <span className="rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3 py-1 font-mono text-[12px] text-[#525252]">
-                        ปี {p.year}
-                      </span>
-                    )}
+                    <Badge variant="ink">{p.category}</Badge>
+                    {p.year && <Badge variant="surface">ปี {p.year}</Badge>}
                   </div>
 
                   <h2 id="project-title" className="text-2xl sm:text-3xl font-bold tracking-tight text-[#111111] leading-tight">
@@ -180,12 +175,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                   <Group label="เครื่องมือและเทคโนโลยี">
                     <div className="flex flex-wrap gap-1.5">
                       {p.tech.map((t) => (
-                        <span
-                          key={t}
-                          className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] text-[#111111]"
-                        >
-                          {t}
-                        </span>
+                        <Badge key={t} variant="ink">{t}</Badge>
                       ))}
                     </div>
                   </Group>
