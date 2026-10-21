@@ -5,7 +5,7 @@ import ActivitiesTimeline from "@/components/home/ActivitiesTimeline";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col bg-white">
+    <main id="main-content" className="flex flex-col bg-white">
       <Hero />
       <RecentWorks />
       <SkillsSection />

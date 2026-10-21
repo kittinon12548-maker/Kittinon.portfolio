@@ -1,12 +1,18 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { contact, profile } from "@/data/portfolio";
 import { scrollToTop } from "@/lib/scroll";
 
 export default function Footer() {
   const [copied, setCopied] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const copy = async () => {
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -38,10 +44,11 @@ export default function Footer() {
             {/* Copy Email Button */}
             <button
               onClick={copy}
+              aria-label="คัดลอกอีเมลสำหรับติดต่อ"
               className="relative inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-neutral-800 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
             >
-              <span>{copied ? "คัดลอกอีเมลแล้ว ✓" : contact.email}</span>
-              {!copied && <span className="text-sm leading-none">↗</span>}
+              <span aria-live="polite">{copied ? "คัดลอกอีเมลแล้ว ✓" : contact.email}</span>
+              {!copied && <span className="text-sm leading-none" aria-hidden>↗</span>}
             </button>
 
             {/* Direct Phone Call */}

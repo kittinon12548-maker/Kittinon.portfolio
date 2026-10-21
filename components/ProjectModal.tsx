@@ -28,7 +28,36 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
     lenis?.stop();
     document.body.style.overflow = "hidden";
     closeRef.current?.focus();
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (e.key === "Tab") {
+        const container = sheetRef.current;
+        if (!container) return;
+        const focusable = [
+          closeRef.current,
+          ...Array.from(container.querySelectorAll<HTMLElement>('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+        ].filter(Boolean) as HTMLElement[];
+
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    };
     window.addEventListener("keydown", onKey);
     return () => {
       lenis?.start();
@@ -80,17 +109,17 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
         }`}
       >
         {p && (
-          <div className="mx-auto max-w-6xl pb-24">
+          <div className="mx-auto max-w-6xl pb-24 break-words min-w-0">
             <div className="grid gap-12 lg:grid-cols-[1fr_1.8fr] lg:gap-14">
               {/* Left Column: Project Overview & Specs */}
-              <div ref={infoRef} className="space-y-8 lg:self-start">
+              <div ref={infoRef} className="space-y-8 lg:self-start min-w-0">
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] font-medium text-[#111111]">
                       {p.category}
                     </span>
                     {p.year && (
-                      <span className="rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3 py-1 font-mono text-[12px] text-[#6B6B6B]">
+                      <span className="rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3 py-1 font-mono text-[12px] text-[#525252]">
                         ปี {p.year}
                       </span>
                     )}
@@ -99,7 +128,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                   <h2 id="project-title" className="text-2xl sm:text-3xl font-bold tracking-tight text-[#111111] leading-tight">
                     {p.title}
                   </h2>
-                  <p className="mt-1 text-sm text-[#6B6B6B] leading-relaxed">{p.subtitle}</p>
+                  <p className="mt-1 text-sm text-[#525252] leading-relaxed">{p.subtitle}</p>
 
                   {/* Award Recognition Box */}
                   {p.award && (

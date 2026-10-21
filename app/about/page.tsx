@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "เกี่ยวกับ" };
 
 export default function AboutPage() {
   return (
-    <main>
+    <main id="main-content">
       <AboutHero />
       <AboutStory />
       <Services />

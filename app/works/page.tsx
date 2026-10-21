@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "ผลงาน" };
 
 export default function WorksPage() {
   return (
-    <main>
+    <main id="main-content">
       <WorksGrid />
     </main>
   );

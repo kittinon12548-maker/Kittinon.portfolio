@@ -69,6 +69,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="th" className={`${plexThai.variable} ${manrope.variable} scroll-smooth`}>
       <body className="min-h-screen bg-white text-[#111111] antialiased selection:bg-[#111111] selection:text-white">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-[#111111] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#111111]"
+        >
+          ข้ามไปยังเนื้อหาหลัก
+        </a>
         <SmoothScroll />
         <Header />
         <div className="relative z-10 flex min-h-screen flex-col">
