@@ -16,6 +16,8 @@ html {
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
 }
 
 body {
@@ -23,6 +25,8 @@ body {
   background-color: #ffffff;
   color: #111111;
   overflow-x: clip;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 ::selection {
