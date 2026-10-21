@@ -42,11 +42,11 @@ export default function SkillsSection() {
         </div>
 
         {/* 3 Domain Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {domains.map((d) => (
             <div
               key={d.title}
-              className="flex flex-col justify-between rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-colors hover:border-[#CCCCCC]"
+              className="flex flex-col justify-between rounded-2xl border border-[#E5E5E5] bg-white p-6 sm:p-8 transition-colors hover:border-[#CCCCCC]"
             >
               <div>
                 <span className="font-mono text-[13px] font-semibold text-[#525252] tabular-nums">{d.number}</span>

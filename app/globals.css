@@ -56,3 +56,56 @@ body {
     -webkit-text-stroke: 2.5px #111111;
   }
 }
+
+/* Safe Area Inset Adaptation (Mobile Notches & Home Bars) */
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Touch Input & Pointer Device Adaptation */
+@media (pointer: coarse) {
+  /* Prevent double-tap zoom delay on touch buttons */
+  a, button {
+    touch-action: manipulation;
+  }
+}
+
+/* Print Stylesheet Adaptation (Recruiter & HR PDF Exports) */
+@media print {
+  header,
+  footer,
+  a[href="#main-content"],
+  .about-ticker,
+  button:not(.print-keep) {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    border-bottom: 1px solid #cccccc !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  article,
+  .rounded-2xl {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border-color: #dddddd !important;
+    box-shadow: none !important;
+  }
+
+  .text-outline {
+    color: #000000 !important;
+    -webkit-text-stroke: 0 !important;
+  }
+}

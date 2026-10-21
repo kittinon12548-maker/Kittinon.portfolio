@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="mx-auto max-w-[1200px] px-6">
         {/* Full-Width Giant Typographic Headline */}
         <div className="w-full select-none pb-8 md:pb-12">
-          <h1 className="text-[clamp(3.2rem,9.2vw,9.5rem)] font-extrabold uppercase leading-[0.92] tracking-tighter flex flex-wrap items-baseline gap-x-4 md:gap-x-7">
+          <h1 className="text-[clamp(2.4rem,8.5vw,9.5rem)] font-extrabold uppercase leading-[0.92] tracking-tighter flex flex-wrap items-baseline gap-x-4 md:gap-x-7">
             <span className="text-outline">KITTINON</span>
             <span className="text-[#111111]">CHUMBOON</span>
           </h1>

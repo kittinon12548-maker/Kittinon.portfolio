@@ -104,12 +104,12 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
         aria-modal="true"
         aria-labelledby="project-title"
         data-lenis-prevent
-        className={`absolute inset-x-0 top-[70px] bottom-0 overflow-y-auto overscroll-contain rounded-t-[24px] border-t border-[#E5E5E5] bg-white text-[#111111] p-6 sm:p-12 transition-transform duration-500 ease-out ${
+        className={`absolute inset-x-0 top-[70px] bottom-0 overflow-y-auto overscroll-contain rounded-t-[24px] border-t border-[#E5E5E5] bg-white text-[#111111] p-5 sm:p-10 lg:p-12 transition-transform duration-500 ease-out ${
           open ? "translate-y-0" : "translate-y-full"
         }`}
       >
         {p && (
-          <div className="mx-auto max-w-6xl pb-24 break-words min-w-0">
+          <div className="mx-auto max-w-6xl pb-24 pb-[max(6rem,calc(env(safe-area-inset-bottom)+5rem))] break-words min-w-0">
             <div className="grid gap-12 lg:grid-cols-[1fr_1.8fr] lg:gap-14">
               {/* Left Column: Project Overview & Specs */}
               <div ref={infoRef} className="space-y-8 lg:self-start min-w-0">

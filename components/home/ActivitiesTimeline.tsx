@@ -24,7 +24,7 @@ export default function ActivitiesTimeline() {
               <span className="absolute -left-[31px] sm:-left-[47px] top-6 size-3.5 rounded-full border-2 border-white bg-[#111111]" />
 
               {/* Minimalist Card */}
-              <div className="rounded-2xl border border-[#E5E5E5] bg-white p-6 sm:p-8 transition-colors hover:border-[#CCCCCC]">
+              <div className="rounded-2xl border border-[#E5E5E5] bg-white p-5 sm:p-8 transition-colors hover:border-[#CCCCCC]">
                 <div className="flex flex-wrap items-center gap-2.5">
                   <span className="rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3.5 py-1 font-mono text-[13px] font-semibold text-[#111111] tabular-nums">
                     ปี {a.year}
