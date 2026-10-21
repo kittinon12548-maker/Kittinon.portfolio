@@ -189,7 +189,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                         <a
                           href={p.demoUrl}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-neutral-800"
                         >
                           <span>ทดลองใช้งานจริง</span>
@@ -200,7 +200,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                         <a
                           href={p.githubUrl}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-5 py-2.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5]"
                         >
                           <span>GitHub</span>

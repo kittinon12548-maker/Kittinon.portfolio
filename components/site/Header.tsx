@@ -90,7 +90,7 @@ export default function Header() {
           <a
             href="https://github.com/kittinon12548-maker"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             aria-label="ดู GitHub ของ Kittinon"
             className="hidden sm:inline-flex items-center justify-center size-11 rounded-full border border-[#E5E5E5] bg-white text-[#111111] transition-colors hover:bg-[#F5F5F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111]"
           >
@@ -203,7 +203,7 @@ export default function Header() {
             <a
               href="https://github.com/kittinon12548-maker"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="text-xs font-semibold text-[#525252] hover:text-[#111111]"
             >
               GitHub ↗
