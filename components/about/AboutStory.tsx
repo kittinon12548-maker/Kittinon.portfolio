@@ -36,7 +36,7 @@ export default function AboutStory() {
           {about.facts.map((f) => (
             <div key={f.label} className="rounded-2xl border border-[#E5E5E5] bg-white p-6">
               <dt className="text-[13px] text-[#525252] font-medium">{f.label}</dt>
-              <dd className="mt-2 text-[16px] leading-snug font-semibold text-[#111111]">{f.value}</dd>
+              <dd className="mt-2 text-[16px] leading-snug font-semibold text-[#111111] tabular-nums">{f.value}</dd>
             </div>
           ))}
         </dl>

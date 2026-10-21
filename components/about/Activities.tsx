@@ -18,7 +18,7 @@ export default function Activities() {
         <ol className="border-t border-[#E5E5E5]">
           {about.activities.map((a, i) => (
             <li key={i} className="grid gap-2 border-b border-[#E5E5E5] py-8 md:grid-cols-12 md:gap-6">
-              <span className="font-mono text-sm font-semibold text-[#525252] md:col-span-2">
+              <span className="font-mono text-sm font-semibold text-[#525252] md:col-span-2 tabular-nums">
                 ปี {a.year}
               </span>
               <div className="md:col-span-10">

@@ -15,11 +15,11 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3 lg:gap-8">
           {about.services.map((s, i) => (
-            <article key={s.title} className="flex flex-col justify-between rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-colors hover:border-[#CCCCCC]">
+            <article key={s.title} className="flex flex-col justify-between rounded-2xl border border-[#E5E5E5] bg-white p-6 sm:p-8 transition-colors hover:border-[#CCCCCC]">
               <div>
-                <p className="text-[13px] font-mono font-semibold text-[#525252]">{String(i + 1).padStart(2, "0")}</p>
+                <p className="text-[13px] font-mono font-semibold text-[#525252] tabular-nums">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-3 text-xl font-semibold tracking-tight text-[#111111]">{s.title}</h3>
                 <p className="mt-3 text-sm leading-[1.6] text-[#525252]">{s.body}</p>
               </div>
