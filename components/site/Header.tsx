@@ -34,7 +34,7 @@ export default function Header() {
         </div>
 
         {/* Center: Desktop Navigation Menu */}
-        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-[#6B6B6B]">
+        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-[#525252]">
           <li>
             <Link
               href="/"
@@ -51,7 +51,7 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, "projects")}
               className="inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[#111111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-1.5 py-0.5"
             >
-              <span>ผลงาน</span><span className="text-[13px] text-[#6B6B6B]">[{projects.length}]</span>
+              <span>ผลงาน</span><span className="text-[13px] text-[#525252] tabular-nums">[{projects.length}]</span>
             </Link>
           </li>
           <li>
@@ -60,7 +60,7 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, "skills")}
               className="inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[#111111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-1.5 py-0.5"
             >
-              <span>ทักษะ</span><span className="text-[13px] text-[#6B6B6B]">[{about.services.length}]</span>
+              <span>ทักษะ</span><span className="text-[13px] text-[#525252] tabular-nums">[{about.services.length}]</span>
             </Link>
           </li>
           <li>
@@ -69,7 +69,7 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, "activities")}
               className="inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[#111111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-1.5 py-0.5"
             >
-              <span>รางวัล</span><span className="text-[13px] text-[#6B6B6B]">[{about.activities.length}]</span>
+              <span>รางวัล</span><span className="text-[13px] text-[#525252] tabular-nums">[{about.activities.length}]</span>
             </Link>
           </li>
           <li>
@@ -134,7 +134,7 @@ export default function Header() {
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-[#E5E5E5] bg-white px-6 py-4 animate-in fade-in slide-in-from-top-2 duration-200">
-          <ul className="flex flex-col gap-3 text-[15px] font-medium text-[#6B6B6B]">
+          <ul className="flex flex-col gap-3 text-[15px] font-medium text-[#525252]">
             <li>
               <Link
                 href="/"
@@ -153,7 +153,7 @@ export default function Header() {
                 className="flex items-center justify-between py-1.5 transition-colors hover:text-[#111111]"
               >
                 <span>ผลงานเด่น</span>
-                <span className="font-mono text-xs text-[#6B6B6B]">[{projects.length}]</span>
+                <span className="font-mono text-xs text-[#525252] tabular-nums">[{projects.length}]</span>
               </Link>
             </li>
             <li>
@@ -163,7 +163,7 @@ export default function Header() {
                 className="flex items-center justify-between py-1.5 transition-colors hover:text-[#111111]"
               >
                 <span>ทักษะและความเชี่ยวชาญ</span>
-                <span className="font-mono text-xs text-[#6B6B6B]">[{about.services.length}]</span>
+                <span className="font-mono text-xs text-[#525252] tabular-nums">[{about.services.length}]</span>
               </Link>
             </li>
             <li>
@@ -173,7 +173,7 @@ export default function Header() {
                 className="flex items-center justify-between py-1.5 transition-colors hover:text-[#111111]"
               >
                 <span>รางวัลและเกียรติประวัติ</span>
-                <span className="font-mono text-xs text-[#6B6B6B]">[{about.activities.length}]</span>
+                <span className="font-mono text-xs text-[#525252] tabular-nums">[{about.activities.length}]</span>
               </Link>
             </li>
             <li>
@@ -204,7 +204,7 @@ export default function Header() {
               href="https://github.com/kittinon12548-maker"
               target="_blank"
               rel="noreferrer"
-              className="text-xs font-semibold text-[#6B6B6B] hover:text-[#111111]"
+              className="text-xs font-semibold text-[#525252] hover:text-[#111111]"
             >
               GitHub ↗
             </a>

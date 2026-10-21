@@ -24,7 +24,7 @@ export default function Hero() {
               <span>Data Analyst &amp; ML Developer</span>
             </div>
 
-            <p className="mt-4 text-[16px] leading-[1.6] text-[#6B6B6B]">
+            <p className="mt-4 text-[16px] leading-[1.6] text-[#525252]">
               นิสิต Data Science ม.ทักษิณ เชี่ยวชาญการวิเคราะห์ข้อมูลด้วย Power BI และพัฒนาโมเดลปัญญาประดิษฐ์ด้วย PyTorch พร้อมฝึกงานช่วง {profile.availability}
             </p>
 
@@ -69,27 +69,27 @@ export default function Hero() {
             <div className="flex w-full flex-col md:w-auto md:min-w-[190px]">
               {/* GPAX Card with Restored PetGuard AI Text */}
               <div className="w-full rounded-2xl border border-[#E5E5E5] bg-white p-5 transition-colors hover:border-[#CCCCCC] mb-6">
-                <div className="flex items-center gap-1.5 text-[13px] font-semibold text-[#6B6B6B] uppercase tracking-wider">
-                  <GraduationCap className="size-3.5 text-[#6B6B6B]" />
+                <div className="flex items-center gap-1.5 text-[13px] font-semibold text-[#525252] uppercase tracking-wider">
+                  <GraduationCap className="size-3.5 text-[#525252]" />
                   <span>เกรดเฉลี่ยสะสม</span>
                 </div>
 
                 <div className="mt-2 flex items-baseline gap-1.5">
-                  <span className="text-3xl font-extrabold tracking-tight text-[#111111]">
+                  <span className="text-3xl font-extrabold tracking-tight text-[#111111] tabular-nums">
                     {profile.gpax}
                   </span>
-                  <span className="text-[13px] font-medium text-[#6B6B6B]">/ 4.00</span>
+                  <span className="text-[13px] font-medium text-[#525252] tabular-nums">/ 4.00</span>
                 </div>
 
                 <div className="mt-2.5 min-h-[38px] flex items-center">
-                  <p className="text-[13px] leading-relaxed text-[#6B6B6B]">
+                  <p className="text-[13px] leading-relaxed text-[#525252]">
                     PetGuard AI (PyTorch 92.2%) รอบชิงระดับมหาวิทยาลัย TSU Pitching 2026
                   </p>
                 </div>
               </div>
 
               {/* Social Link Pills */}
-              <span className="text-[13px] font-semibold uppercase tracking-wider text-[#6B6B6B] mb-2">
+              <span className="text-[13px] font-semibold uppercase tracking-wider text-[#525252] mb-2">
                 ช่องทางติดต่อ
               </span>
 
@@ -103,7 +103,7 @@ export default function Hero() {
                     className="flex items-center justify-between gap-4 rounded-full border border-[#E5E5E5] bg-white px-4 py-2.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
                   >
                     <span>{s.label}</span>
-                    <span className="text-[13px] text-[#6B6B6B]">↗</span>
+                    <span className="text-[13px] text-[#525252]">↗</span>
                   </a>
                 ))}
 
@@ -112,15 +112,15 @@ export default function Hero() {
                   className="flex items-center justify-between gap-4 rounded-full border border-[#E5E5E5] bg-white px-4 py-2.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
                 >
                   <span>อีเมล</span>
-                  <span className="text-[13px] text-[#6B6B6B]">↗</span>
+                  <span className="text-[13px] text-[#525252]">↗</span>
                 </a>
 
                 <a
                   href={`tel:${contact.phone.replace(/-/g, "")}`}
                   className="flex items-center justify-between gap-4 rounded-full border border-[#E5E5E5] bg-white px-4 py-2.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
                 >
-                  <span>{contact.phone}</span>
-                  <span className="text-[13px] text-[#6B6B6B]">↗</span>
+                  <span className="tabular-nums">{contact.phone}</span>
+                  <span className="text-[13px] text-[#525252]">↗</span>
                 </a>
               </div>
             </div>
@@ -131,28 +131,28 @@ export default function Hero() {
         <div className="mt-16 pt-12 border-t border-[#E5E5E5]">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#E5E5E5]">
             <div className="py-6 first:pt-0 last:pb-0 md:py-0 md:px-6 text-center">
-              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight">
+              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight tabular-nums">
                 92.2%
               </span>
-              <span className="block text-[13px] text-[#6B6B6B] mt-2">
+              <span className="block text-[13px] text-[#525252] mt-2">
                 ความแม่นยำโมเดลต้นแบบ PetGuard AI บน Test Set (4 คลาส)
               </span>
             </div>
 
             <div className="py-6 first:pt-0 last:pb-0 md:py-0 md:px-6 text-center">
-              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight">
+              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight tabular-nums">
                 13 ปี
               </span>
-              <span className="block text-[13px] text-[#6B6B6B] mt-2">
+              <span className="block text-[13px] text-[#525252] mt-2">
                 ข้อมูลภาครัฐที่ใช้วิเคราะห์
               </span>
             </div>
 
             <div className="py-6 first:pt-0 last:pb-0 md:py-0 md:px-6 text-center">
-              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight">
+              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight tabular-nums">
                 9,600+
               </span>
-              <span className="block text-[13px] text-[#6B6B6B] mt-2">
+              <span className="block text-[13px] text-[#525252] mt-2">
                 รูปใน Dataset ฝึกโมเดล
               </span>
             </div>

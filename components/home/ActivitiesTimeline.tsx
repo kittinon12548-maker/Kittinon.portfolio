@@ -11,7 +11,7 @@ export default function ActivitiesTimeline() {
           <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
             รางวัลและกิจกรรมสำคัญ
           </h2>
-          <p className="mt-3 text-[16px] leading-[1.6] text-[#6B6B6B] max-w-xl">
+          <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
             เกียรติประวัติทางวิชาการ การแข่งขันนวัตกรรม และบทบาทความรับผิดชอบ
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function ActivitiesTimeline() {
               {/* Minimalist Card */}
               <div className="rounded-2xl border border-[#E5E5E5] bg-white p-6 sm:p-8 transition-colors hover:border-[#CCCCCC]">
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3.5 py-1 font-mono text-[13px] font-semibold text-[#111111]">
+                  <span className="rounded-full border border-[#E5E5E5] bg-[#F5F5F5] px-3.5 py-1 font-mono text-[13px] font-semibold text-[#111111] tabular-nums">
                     ปี {a.year}
                   </span>
                   {a.title.includes("รางวัล") || a.title.includes("ชนะเลิศ") ? (

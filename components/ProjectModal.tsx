@@ -166,7 +166,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                   <Group label="ฟังก์ชันสำคัญ">
                     <ul className="space-y-2">
                       {p.features.map((f, i) => (
-                        <li key={i} className="flex gap-2.5 text-sm text-[#6B6B6B]">
+                        <li key={i} className="flex gap-2.5 text-sm text-[#525252]">
                           <span className="mt-2 size-1.5 shrink-0 rounded-full bg-[#111111]" />
                           <span>{f}</span>
                         </li>
@@ -224,7 +224,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
 
               {/* Right Column: Screenshots List */}
               <div className="space-y-6">
-                <div className="text-[13px] font-semibold text-[#6B6B6B] uppercase tracking-wider mb-2">
+                <div className="text-[13px] font-semibold text-[#525252] uppercase tracking-wider mb-2">
                   ภาพประกอบผลงาน
                 </div>
 
@@ -259,7 +259,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                           </div>
                         )}
                         {caption && (
-                          <figcaption className="mt-3 px-2 pb-1 text-[13px] leading-relaxed text-[#6B6B6B]">
+                          <figcaption className="mt-3 px-2 pb-1 text-[13px] leading-relaxed text-[#525252]">
                             {caption}
                           </figcaption>
                         )}
@@ -285,7 +285,7 @@ function Group({ label, children }: { label: string; children: React.ReactNode }
       <h3 className="border-b border-[#E5E5E5] pb-2 text-[13px] font-semibold uppercase tracking-wider text-[#111111]">
         {label}
       </h3>
-      <div className="mt-3 text-sm leading-[1.6] text-[#6B6B6B]">{children}</div>
+      <div className="mt-3 text-sm leading-[1.6] text-[#525252]">{children}</div>
     </section>
   );
 }

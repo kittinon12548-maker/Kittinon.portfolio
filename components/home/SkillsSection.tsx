@@ -36,7 +36,7 @@ export default function SkillsSection() {
           <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
             ทักษะและความเชี่ยวชาญ
           </h2>
-          <p className="mt-3 text-[16px] leading-[1.6] text-[#6B6B6B] max-w-xl">
+          <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
             บูรณาการการวิเคราะห์ข้อมูลเชิงลึก (Data Analytics) โมเดลปัญญาประดิษฐ์ (Machine Learning) และการสื่อสารข้อมูล
           </p>
         </div>
@@ -49,14 +49,14 @@ export default function SkillsSection() {
               className="flex flex-col justify-between rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-colors hover:border-[#CCCCCC]"
             >
               <div>
-                <span className="font-mono text-[13px] font-semibold text-[#6B6B6B]">{d.number}</span>
+                <span className="font-mono text-[13px] font-semibold text-[#525252] tabular-nums">{d.number}</span>
                 <h3 className="mt-2 text-xl font-semibold tracking-tight text-[#111111]">{d.title}</h3>
                 <p className="mt-1 text-[13px] text-[#525252] font-medium">{d.subtitle}</p>
                 <p className="mt-4 text-sm leading-[1.6] text-[#525252]">{d.description}</p>
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#E5E5E5]">
-                <span className="text-[13px] font-semibold uppercase tracking-wider text-[#6B6B6B] block mb-3">
+                <span className="text-[13px] font-semibold uppercase tracking-wider text-[#525252] block mb-3">
                   เครื่องมือ
                 </span>
                 <div className="flex flex-wrap gap-1.5">

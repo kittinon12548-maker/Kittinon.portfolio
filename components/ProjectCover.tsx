@@ -74,7 +74,7 @@ function Inventory({ accent }: { accent: string }) {
             {["1,284", "37", "12"].map((n) => (
               <div key={n} className="rounded-lg bg-white/[0.04] p-2">
                 <Bar w="50%" className="h-1.5" />
-                <p className="mt-1.5 text-[clamp(10px,1.4vw,15px)] font-semibold tracking-tight text-zinc-300">
+                <p className="mt-1.5 text-[clamp(10px,1.4vw,15px)] font-semibold tracking-tight text-zinc-300 tabular-nums">
                   {n}
                 </p>
               </div>
@@ -139,7 +139,7 @@ function Finance({ accent }: { accent: string }) {
       </div>
       <div className="mt-4 flex items-end justify-between rounded-xl bg-white/[0.06] p-3 text-white border border-white/[0.08]">
         <span className="text-[9px] tracking-widest uppercase text-zinc-400">Total</span>
-        <span className="text-[clamp(14px,2.2vw,24px)] leading-none font-bold text-white">฿4,850</span>
+        <span className="text-[clamp(14px,2.2vw,24px)] leading-none font-bold text-white tabular-nums">฿4,850</span>
       </div>
     </div>
   );

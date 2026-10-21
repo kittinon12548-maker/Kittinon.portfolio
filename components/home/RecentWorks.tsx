@@ -20,16 +20,16 @@ export default function RecentWorks() {
             <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-[#111111] leading-tight">
               ผลงานเด่น
             </h2>
-            <p className="mt-3 text-[16px] leading-[1.6] text-[#6B6B6B] max-w-xl">
+            <p className="mt-3 text-[16px] leading-[1.6] text-[#525252] max-w-xl">
               โครงการวิเคราะห์ข้อมูล แดชบอร์ดเชิงโต้ตอบ และโมเดลปัญญาประดิษฐ์ที่พัฒนาขึ้นจริง
             </p>
           </div>
 
           <Link
             href="/works"
-            className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wider text-[#111111] hover:text-[#6B6B6B] transition-colors whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wider text-[#111111] hover:text-[#525252] transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-1"
           >
-            <span>ดูทั้งหมด [{projects.length}]</span>
+            <span>ดูทั้งหมด <span className="tabular-nums font-mono">[{projects.length}]</span></span>
             <span className="text-sm">↗</span>
           </Link>
         </div>
@@ -59,13 +59,13 @@ export default function RecentWorks() {
               <div className="flex flex-1 flex-col justify-between p-6">
                 <div>
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-lg font-semibold text-[#111111] group-hover:text-[#6B6B6B] transition-colors leading-snug">
+                    <h3 className="text-lg font-semibold text-[#111111] group-hover:text-[#525252] transition-colors leading-snug">
                       {project.title}
                     </h3>
-                    <span className="text-[13px] text-[#6B6B6B] shrink-0 mt-1">↗</span>
+                    <span className="text-[13px] text-[#525252] shrink-0 mt-1">↗</span>
                   </div>
 
-                  <p className="mt-2 text-sm leading-relaxed text-[#6B6B6B] line-clamp-2">
+                  <p className="mt-2 text-sm leading-relaxed text-[#525252] line-clamp-2">
                     {project.subtitle}
                   </p>
                 </div>
@@ -78,13 +78,13 @@ export default function RecentWorks() {
                   {project.tech.slice(0, 2).map((t) => (
                     <span
                       key={t}
-                      className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] text-[#6B6B6B]"
+                      className="rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[13px] text-[#525252]"
                     >
                       {t}
                     </span>
                   ))}
                   {project.tech.length > 2 && (
-                    <span className="rounded-full border border-[#E5E5E5] bg-white px-2.5 py-1 text-[13px] text-[#6B6B6B]">
+                    <span className="rounded-full border border-[#E5E5E5] bg-white px-2.5 py-1 text-[13px] text-[#525252] tabular-nums">
                       +{project.tech.length - 2}
                     </span>
                   )}

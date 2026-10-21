@@ -48,7 +48,7 @@ export default function AboutHero() {
         <TextTile className="bg-white border border-[#E5E5E5] text-[clamp(1.1rem,1.8vw,1.4rem)] leading-tight tracking-tight text-[#111111]">
           Open for internship
           <br />
-          <span className="text-[13px] text-[#6B6B6B] mt-1 block">{profile.availability}</span>
+          <span className="text-[13px] text-[#525252] mt-1 block">{profile.availability}</span>
         </TextTile>
       ),
     },
@@ -91,7 +91,7 @@ export default function AboutHero() {
             </span>
           ))}
         </h1>
-        <p className="about-sub mt-6 text-base text-[#6B6B6B] md:text-lg">{about.sub}</p>
+        <p className="about-sub mt-6 text-base text-[#525252] md:text-lg">{about.sub}</p>
       </div>
 
       <div className="about-ticker mt-auto pt-16 pb-8" aria-hidden>
