@@ -7,7 +7,7 @@ export default function SkillsSection() {
       title: "Data Analytics & BI",
       subtitle: "การวิเคราะห์และแสดงผลข้อมูลเชิงลึก (EDA & Dashboards)",
       description:
-        "เชี่ยวชาญการเตรียมข้อมูล (Data Preparation) คัดกรองค่าผิดปกติด้วยสถิติ Z-score และ IQR สร้างตัวแปร Growth Rate & Gini Index วิเคราะห์ข้อมูลภาครัฐ 13 ปี และพัฒนา Interactive Dashboard ด้วย Power BI",
+        "มีประสบการณ์การเตรียมข้อมูล (Data Preparation) คัดกรองค่าผิดปกติด้วยสถิติ Z-score และ IQR สร้างตัวแปร Growth Rate & Gini Index วิเคราะห์ข้อมูลภาครัฐ 13 ปี และพัฒนา Interactive Dashboard ด้วย Power BI",
       tools: ["Power BI", "Python", "SQL", "Excel", "Pandas", "NumPy"],
     },
     {
@@ -23,7 +23,7 @@ export default function SkillsSection() {
       title: "Research & Innovation",
       subtitle: "นวัตกรรมและการนำเสนอผลงานระดับประเทศ & สากล",
       description:
-        "นำเสนอผลงานวิจัยจนได้รับรางวัลระดับดีมากในการประชุมวิชาการระดับชาติ มศว และชนะเลิศ Pitching นวัตกรรมตู้ดิจิทัลอัจฉริยะ จนได้รับคัดเลือกศึกษาดูงาน Taiwan Tech GTE-X Bootcamp ณ ประเทศไต้หวัน",
+        "นำเสนอผลงานวิจัยจนได้รับรางวัลระดับดีมากในการประชุมวิชาการระดับชาติ มศว และเป็นหนึ่งในทีมผู้ชนะ Pitching นวัตกรรมตู้ดิจิทัลอัจฉริยะ จนได้รับคัดเลือกศึกษาดูงานในโครงการ TSU Discover Taiwan Startup Ecosystem ณ ประเทศไต้หวัน",
       tools: ["Power BI", "Python", "Git", "GitHub"],
     },
   ];
@@ -33,7 +33,7 @@ export default function SkillsSection() {
       <div className="mx-auto max-w-[1200px] px-6">
         {/* Section Header */}
         <SectionHeader
-          title="ทักษะและความเชี่ยวชาญ"
+          title="ทักษะและประสบการณ์"
           subtitle="บูรณาการการวิเคราะห์ข้อมูลเชิงลึก (Data Analytics) โมเดลปัญญาประดิษฐ์ (Machine Learning) และการสื่อสารข้อมูล"
         />
 

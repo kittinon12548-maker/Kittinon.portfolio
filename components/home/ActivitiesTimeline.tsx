@@ -22,7 +22,7 @@ export default function ActivitiesTimeline() {
               <div className="rounded-2xl border border-[#E5E5E5] bg-white p-5 sm:p-8 transition-colors hover:border-[#CCCCCC]">
                 <div className="flex flex-wrap items-center gap-2.5">
                   <Badge variant="surface">ปี {a.year}</Badge>
-                  {a.title.includes("รางวัล") || a.title.includes("ชนะเลิศ") ? (
+                  {a.title.includes("รางวัล") || a.title.includes("ชนะเลิศ") || a.title.includes("ผู้ชนะ") ? (
                     <Badge variant="solid">เกียรติประวัติ</Badge>
                   ) : null}
                 </div>

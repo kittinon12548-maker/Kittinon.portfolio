@@ -8,7 +8,7 @@ export default function Services() {
         {/* Section Header */}
         <SectionHeader
           title={about.servicesHeading}
-          subtitle="ความเชี่ยวชาญและเครื่องมือที่นำมาปรับใช้เพื่อตอบโจทย์องค์กร"
+          subtitle="ทักษะ ประสบการณ์ และเครื่องมือที่นำมาปรับใช้เพื่อตอบโจทย์องค์กร"
         />
 
         <div className="grid gap-6 md:grid-cols-3 lg:gap-8">

@@ -25,7 +25,7 @@ const plexThai = localFont({
 });
 
 const metaDescription =
-  "Data Science student at Thaksin University seeking a Data Analyst internship, April to September. Experienced in Power BI dashboards and PyTorch image classification (92.2% accuracy).";
+  "Data Science student at Thaksin University seeking a Data Analyst internship, 7 April – September 2027. Experienced in Power BI dashboards and PyTorch image classification (92.2% accuracy).";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kittinon-portfolio.vercel.app"),

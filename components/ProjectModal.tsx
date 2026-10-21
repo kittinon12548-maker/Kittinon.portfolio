@@ -145,6 +145,14 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                       <span>{p.metric}</span>
                     </div>
                   )}
+
+                  {/* Medical / Prototype Disclaimer */}
+                  {p.disclaimer && (
+                    <div className="mt-3.5 flex items-start gap-2.5 rounded-xl border border-amber-200 bg-amber-50 p-3.5 text-[13px] text-amber-900 leading-relaxed">
+                      <span className="shrink-0 text-base" aria-hidden="true">⚠️</span>
+                      <span className="font-normal">{p.disclaimer}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Problem & Solution */}

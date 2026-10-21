@@ -162,7 +162,7 @@ export default function Header() {
                 onClick={(e) => handleNavClick(e, "skills")}
                 className="flex items-center justify-between py-1.5 transition-colors hover:text-[#111111]"
               >
-                <span>ทักษะและความเชี่ยวชาญ</span>
+                <span>ทักษะและประสบการณ์</span>
                 <span className="font-mono text-xs text-[#525252] tabular-nums">[{about.services.length}]</span>
               </Link>
             </li>

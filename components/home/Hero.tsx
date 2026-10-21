@@ -25,7 +25,7 @@ export default function Hero() {
             </div>
 
             <p className="mt-4 text-[16px] leading-[1.6] text-[#525252]">
-              นิสิต Data Science ม.ทักษิณ เชี่ยวชาญการวิเคราะห์ข้อมูลด้วย Power BI และพัฒนาโมเดลปัญญาประดิษฐ์ด้วย PyTorch พร้อมฝึกงานช่วง {profile.availability}
+              นิสิต Data Science ม.ทักษิณ มีประสบการณ์การวิเคราะห์ข้อมูลด้วย Power BI และพัฒนาโมเดลปัญญาประดิษฐ์ด้วย PyTorch พร้อมฝึกงานช่วง {profile.availability}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
