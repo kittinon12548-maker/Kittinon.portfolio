@@ -11,6 +11,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
   const closeRef = useRef<HTMLButtonElement>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
   const open = project !== null;
 
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
 
   useEffect(() => {
     if (!open) return;
+    openerRef.current = document.activeElement as HTMLElement;
     const lenis = getLenis();
     lenis?.stop();
     document.body.style.overflow = "hidden";
@@ -32,6 +34,7 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
       lenis?.start();
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
+      openerRef.current?.focus();
     };
   }, [open, onClose]);
 
@@ -51,12 +54,12 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
         onClick={onClose}
       />
 
-      {/* Floating Close Button */}
+      {/* Floating Close Button (44x44px for Touch Target standards) */}
       <button
         ref={closeRef}
         onClick={onClose}
         aria-label="ปิดหน้าต่าง"
-        className={`absolute top-5 left-1/2 z-20 grid size-10 -translate-x-1/2 place-items-center rounded-full border border-[#E5E5E5] bg-white text-[#111111] transition-all duration-300 hover:bg-[#F5F5F5] cursor-pointer ${
+        className={`absolute top-5 left-1/2 z-20 grid size-11 -translate-x-1/2 place-items-center rounded-full border border-[#E5E5E5] bg-white text-[#111111] transition-all duration-300 hover:bg-[#F5F5F5] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2 ${
           open ? "opacity-100 scale-100" : "opacity-0 scale-90"
         }`}
       >

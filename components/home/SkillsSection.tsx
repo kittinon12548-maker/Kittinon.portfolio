@@ -51,8 +51,8 @@ export default function SkillsSection() {
               <div>
                 <span className="font-mono text-[13px] font-semibold text-[#6B6B6B]">{d.number}</span>
                 <h3 className="mt-2 text-xl font-semibold tracking-tight text-[#111111]">{d.title}</h3>
-                <p className="mt-1 text-[13px] text-[#6B6B6B]">{d.subtitle}</p>
-                <p className="mt-4 text-sm leading-[1.6] text-[#6B6B6B]">{d.description}</p>
+                <p className="mt-1 text-[13px] text-[#525252] font-medium">{d.subtitle}</p>
+                <p className="mt-4 text-sm leading-[1.6] text-[#525252]">{d.description}</p>
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#E5E5E5]">

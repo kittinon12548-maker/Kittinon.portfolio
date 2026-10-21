@@ -28,7 +28,7 @@ export default function Footer() {
               พร้อมร่วมงานและเรียนรู้กับทีมของคุณ
             </h2>
 
-            <p className="mt-4 text-[16px] leading-[1.6] text-[#6B6B6B]">
+            <p className="mt-4 text-[16px] leading-[1.6] text-[#525252]">
               เปิดรับโอกาสฝึกงาน ({profile.availabilityNote}) ในตำแหน่ง Data Analyst ยินดีพูดคุยและนัดสัมภาษณ์ครับ
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
             {/* Copy Email Button */}
             <button
               onClick={copy}
-              className="relative inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-neutral-800 cursor-pointer"
+              className="relative inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-3.5 text-[13px] font-semibold text-white transition-colors hover:bg-neutral-800 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
             >
               <span>{copied ? "คัดลอกอีเมลแล้ว ✓" : contact.email}</span>
               {!copied && <span className="text-sm leading-none">↗</span>}
@@ -47,7 +47,7 @@ export default function Footer() {
             {/* Direct Phone Call */}
             <a
               href={`tel:${contact.phone.replace(/-/g, "")}`}
-              className="inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-5 py-3.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-5 py-3.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
             >
               <span>โทร {contact.phone}</span>
             </a>
@@ -59,7 +59,7 @@ export default function Footer() {
                 href={s.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-5 py-3.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5]"
+                className="inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-5 py-3.5 text-[13px] font-medium text-[#111111] transition-colors hover:bg-[#F5F5F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
               >
                 <span>{s.label}</span>
                 <span className="text-[13px] text-[#6B6B6B]">↗</span>
@@ -69,14 +69,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Credits & Back to Top */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#6B6B6B] pt-6 border-t border-[#E5E5E5]">
+        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#525252] pt-6 border-t border-[#E5E5E5]">
           <p>
             {profile.name} ({profile.nameTh}) • {profile.faculty} {profile.university}
           </p>
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#111111] hover:text-[#6B6B6B] transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#111111] hover:text-[#525252] transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] rounded px-1"
           >
             <span>กลับขึ้นด้านบน</span>
             <span>↑</span>

@@ -29,7 +29,7 @@ export default function WorksGrid() {
             <article key={p.slug} className="flex flex-col rounded-2xl border border-[#E5E5E5] bg-white overflow-hidden transition-colors hover:border-[#CCCCCC]">
               <button
                 onClick={() => setSelected(p)}
-                className="group block w-full text-left cursor-pointer"
+                className="group block w-full text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2 rounded-2xl"
                 aria-label={`View details of ${p.title}`}
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#F5F5F5] border-b border-[#E5E5E5]">

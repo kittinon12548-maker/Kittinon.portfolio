@@ -48,7 +48,7 @@ export default function RecentWorks() {
                   setSelected(project);
                 }
               }}
-              className="group flex flex-col rounded-2xl border border-[#E5E5E5] bg-white overflow-hidden transition-colors hover:border-[#CCCCCC] cursor-pointer"
+              className="group flex flex-col rounded-2xl border border-[#E5E5E5] bg-white overflow-hidden transition-colors hover:border-[#CCCCCC] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
             >
               {/* Project Image Box */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#F5F5F5] border-b border-[#E5E5E5]">
