@@ -58,7 +58,7 @@ export const home = {
 // ---------- หน้า About ----------
 export const about = {
   heading: "Transforming raw data into meaningful insights & intelligent solutions",
-  sub: "นิสิต Data Science ชั้นปีที่ 3 · มหาวิทยาลัยทักษิณ (GPAX 3.18)",
+  sub: "นิสิต Data Science ชั้นปีที่ 3 · มหาวิทยาลัยทักษิณ",
   story:
     "ผมศึกษาด้านวิทยาการข้อมูลและสารสนเทศ มหาวิทยาลัยทักษิณ มีความมุ่งมั่นในการสกัดความรู้และคุณค่าจากข้อมูลดิบ ตั้งแต่กระบวนการ Data Cleaning, Outlier Detection, การวิเคราะห์ข้อมูลเชิงสำรวจ (EDA) ไปจนถึงการสื่อสารผลลัพธ์ผ่าน Power BI Interactive Dashboard ที่ตอบโจทย์การตัดสินใจ นอกจากนี้ยังมีประสบการณ์ด้าน Machine Learning & Computer Vision ในการพัฒนาโมเดลจำแนกภาพและโซลูชันนวัตกรรมเพื่อสุขภาพสัตว์เลี้ยง",
   storySub:
