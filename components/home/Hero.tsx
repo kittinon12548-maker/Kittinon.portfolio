@@ -1,9 +1,26 @@
 "use client";
 
-import { profile, contact } from "@/data/portfolio";
+import { useState, useEffect } from "react";
+import { profile, contact, about } from "@/data/portfolio";
 import { GraduationCap } from "lucide-react";
 
 export default function Hero() {
+  const [activityIndex, setActivityIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    if (about.activities.length === 0) return;
+
+    const timer = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActivityIndex((prev) => (prev + 1) % about.activities.length);
+        setIsTransitioning(false);
+      }, 250);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section className="relative w-full bg-white pt-28 pb-[120px] border-b border-[#E5E5E5]">
       <div className="mx-auto max-w-[1200px] px-6">
@@ -69,7 +86,7 @@ export default function Hero() {
           {/* Right Column: GPAX Widget & Vertical Social Link Pills */}
           <div className="flex flex-col items-start md:items-end md:col-span-3">
             <div className="flex w-full flex-col md:w-auto md:min-w-[190px]">
-              {/* GPAX Card with Restored PetGuard AI Text */}
+              {/* GPAX Card with Rotating Activities Title */}
               <div className="w-full rounded-2xl border border-[#E5E5E5] bg-white p-5 transition-colors hover:border-[#CCCCCC] mb-6">
                 <div className="flex items-center gap-1.5 text-[13px] font-semibold text-[#525252] uppercase tracking-wider">
                   <GraduationCap className="size-3.5 text-[#525252]" />
@@ -83,9 +100,16 @@ export default function Hero() {
                   <span className="text-[13px] font-medium text-[#525252] tabular-nums">/ 4.00</span>
                 </div>
 
-                <div className="mt-2.5 min-h-[38px] flex items-center">
-                  <p className="text-[13px] leading-relaxed text-[#525252]">
-                    PetGuard AI (PyTorch 92.2%) รอบชิงระดับมหาวิทยาลัย TSU Pitching 2026
+                {/* Rotating Activity Title (Cycles automatically every 5 seconds) */}
+                <div className="mt-2.5 min-h-[58px] flex items-center">
+                  <p
+                    className={`text-[13px] leading-relaxed text-[#525252] transition-all duration-250 ease-out ${
+                      isTransitioning
+                        ? "opacity-0 -translate-y-1"
+                        : "opacity-100 translate-y-0"
+                    }`}
+                  >
+                    {about.activities[activityIndex]?.title}
                   </p>
                 </div>
               </div>

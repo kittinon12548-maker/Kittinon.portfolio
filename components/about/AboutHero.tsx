@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { about, profile, projects } from "@/data/portfolio";
 import { gsap, useGSAP } from "@/lib/gsap";
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/registry/magicui/marquee";
 import ProjectCover from "../ProjectCover";
 
 type Tile = { size: "square" | "wide" | "tall"; node: React.ReactNode };
@@ -17,9 +19,24 @@ function TextTile({ children, className }: { children: React.ReactNode; classNam
   return <div className={`grid size-full place-items-center p-5 text-center ${className}`}>{children}</div>;
 }
 
+function ImageTile({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
+  return (
+    <div className="size-full bg-[#F5F5F5] overflow-hidden">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        className={`size-full object-cover select-none ${className}`}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  );
+}
+
 export default function AboutHero() {
   const ref = useRef<HTMLElement>(null);
-  const [p0, p1, p2, p3] = projects;
+  const [p0, p1, p2] = projects;
 
   const tiles: Tile[] = [
     { size: "square", node: p0 && <ProjectCover project={p0} className="size-full" /> },
@@ -52,7 +69,24 @@ export default function AboutHero() {
         </TextTile>
       ),
     },
-    { size: "square", node: p3 && <ProjectCover project={p3} className="size-full" /> },
+    {
+      size: "wide",
+      node: (
+        <ImageTile
+          src="/images/gallery/award-cert-presentation.webp"
+          alt="รางวัลเชิดชูเกียรติ นิสิตดีเด่น ด้านบำเพ็ญประโยชน์ มหาวิทยาลัยทักษิณ"
+        />
+      ),
+    },
+    {
+      size: "wide",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-05.webp"
+          alt="เวิร์กช็อป Taiwan Tech GTE-X Bootcamp ณ มหาวิทยาลัยเทคโนโลยีแห่งชาติไต้หวัน"
+        />
+      ),
+    },
     {
       size: "tall",
       node: (
@@ -61,6 +95,51 @@ export default function AboutHero() {
           <br />→ Insights
           <br />→ Impact
         </TextTile>
+      ),
+    },
+    {
+      size: "square",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-04.webp"
+          alt="ทีม Style3 ศึกษาดูงานระบบนิเวศสตาร์ทอัพ ณ ไต้หวัน"
+        />
+      ),
+    },
+    {
+      size: "wide",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-06.webp"
+          alt="การนำเสนอผลงานต้นแบบ Pitching บนเวที Bootcamp"
+        />
+      ),
+    },
+    {
+      size: "square",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-03.webp"
+          alt="การระดมสมองพัฒนา Business Model และ Prototype"
+        />
+      ),
+    },
+    {
+      size: "square",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-01.webp"
+          alt="กิจกรรม Teamwork และ Hands-on Challenge ใน Bootcamp"
+        />
+      ),
+    },
+    {
+      size: "wide",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-02.webp"
+          alt="กิจกรรมแลกเปลี่ยนเรียนรู้ในโครงการ TSU Discover Taiwan"
+        />
       ),
     },
   ];
@@ -94,18 +173,19 @@ export default function AboutHero() {
         <p className="about-sub mt-6 text-base text-[#525252] md:text-lg">{about.sub}</p>
       </div>
 
-      <div className="about-ticker mt-auto pt-16 pb-8" aria-hidden>
-        <div className="marquee flex w-max items-end">
-          {[0, 1].map((copy) => (
-            <div key={copy} className="flex shrink-0 items-end gap-[12px] pr-[12px]">
-              {tiles.map((t, i) => (
-                <div key={i} className={`overflow-hidden rounded-2xl border border-[#E5E5E5] ${sizeClass[t.size]}`}>
-                  {t.node}
-                </div>
-              ))}
+      <div className="about-ticker relative mt-auto w-full overflow-hidden pt-16 pb-8" aria-hidden>
+        <Marquee pauseOnHover className="[--duration:45s] [--gap:12px]">
+          {tiles.map((t, i) => (
+            <div
+              key={i}
+              className={cn("overflow-hidden rounded-2xl border border-[#E5E5E5] bg-white", sizeClass[t.size])}
+            >
+              {t.node}
             </div>
           ))}
-        </div>
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10" />
       </div>
     </section>
   );
