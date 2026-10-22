@@ -12,12 +12,12 @@ export default function AboutStory() {
 
         <div className="mt-12 grid gap-10 md:grid-cols-12 md:items-start">
           {/* Profile Photo */}
-          <div className="relative aspect-[4/3] w-full max-w-[34rem] overflow-hidden rounded-2xl border border-[#E5E5E5] bg-[#F5F5F5] md:col-span-5 flex items-end justify-center">
+          <div className="relative aspect-[16/10] w-full max-w-[34rem] overflow-hidden rounded-2xl border border-[#E5E5E5] bg-[#F5F5F5] md:col-span-6 flex items-center justify-center shadow-sm">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/profile-portrait.webp"
+              src="/images/image_4K.webp"
               alt={profile.nameTh}
-              className="h-full w-auto object-contain object-bottom select-none"
+              className="h-full w-full object-cover object-center select-none"
             />
           </div>
 

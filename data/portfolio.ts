@@ -20,7 +20,7 @@ export const profile = {
   sideJob: "วิจัยและพัฒนานวัตกรรม AI & Data Analytics",
   photo: "/images/profile-portrait.webp",
   portrait: "/images/profile-portrait.webp",
-  storyPhoto: "/images/profile-portrait.webp",
+  storyPhoto: "/images/image_4K.webp",
   avatar: "/images/profile-portrait.webp",
   resumeUrl: "/resume.pdf",
 };
