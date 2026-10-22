@@ -36,10 +36,23 @@ function ImageTile({ src, alt, className = "" }: { src: string; alt: string; cla
 
 export default function AboutHero() {
   const ref = useRef<HTMLElement>(null);
-  const [p0, p1, p2] = projects;
+  const p0 = projects[0];
+  const p2 = projects[2];
 
   const tiles: Tile[] = [
+    // 1. ผลงานที่ 1: Regional Income (Research 13 ปี & Power BI Dashboard)
     { size: "square", node: p0 && <ProjectCover project={p0} className="size-full" /> },
+    // 2. ภาพกิจกรรม Style3 (1/6): ศึกษาดูงานระบบนิเวศสตาร์ทอัพ ณ ไต้หวัน
+    {
+      size: "wide",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-04.webp"
+          alt="ทีม Style3 ศึกษาดูงานระบบนิเวศสตาร์ทอัพ ณ ไต้หวัน"
+        />
+      ),
+    },
+    // 3. ป้ายข้อความ SQL Insight
     {
       size: "wide",
       node: (
@@ -48,17 +61,49 @@ export default function AboutHero() {
         </TextTile>
       ),
     },
-    { size: "square", node: p1 && <ProjectCover project={p1} className="size-full" /> },
+    // 4. ภาพกิจกรรม Style3 (2/6): เวิร์กช็อป Taiwan Tech GTE-X Bootcamp
+    {
+      size: "wide",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-05.webp"
+          alt="เวิร์กช็อป Taiwan Tech GTE-X Bootcamp ณ มหาวิทยาลัยเทคโนโลยีแห่งชาติไต้หวัน"
+        />
+      ),
+    },
+    // 5. ภาพถ่ายโปรไฟล์ (Profile Portrait)
     {
       size: "tall",
       node: (
         <div className="size-full bg-[#F5F5F5] flex items-end justify-center overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/profile-portrait.webp" alt="" className="h-full w-auto object-contain object-bottom" />
+          <img src="/images/profile-portrait.webp" alt={profile.name} className="h-full w-auto object-contain object-bottom" />
         </div>
       ),
     },
+    // 6. ภาพกิจกรรม Style3 (3/6): การนำเสนอผลงาน Pitching บนเวที Bootcamp
+    {
+      size: "wide",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-06.webp"
+          alt="การนำเสนอผลงานต้นแบบ Pitching บนเวที Bootcamp"
+        />
+      ),
+    },
+    // 7. ผลงานที่ 2: Smart Digital Perfume Vending Machine (ทีมผู้ชนะ)
     { size: "square", node: p2 && <ProjectCover project={p2} className="size-full" /> },
+    // 8. ภาพกิจกรรม Style3 (4/6): การระดมสมองพัฒนา Business Model และ Prototype
+    {
+      size: "square",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-03.webp"
+          alt="การระดมสมองพัฒนา Business Model และ Prototype"
+        />
+      ),
+    },
+    // 9. ป้ายข้อความ Open for internship
     {
       size: "wide",
       node: (
@@ -69,24 +114,37 @@ export default function AboutHero() {
         </TextTile>
       ),
     },
+    // 10. ภาพกิจกรรม Style3 (5/6): กิจกรรม Teamwork & Hands-on Challenge
+    {
+      size: "square",
+      node: (
+        <ImageTile
+          src="/images/gallery/style3-pitching-01.webp"
+          alt="กิจกรรม Teamwork และ Hands-on Challenge ใน Bootcamp"
+        />
+      ),
+    },
+    // 11. ผลงานวิจัย: โปสเตอร์ผลงานวิจัยระดับดีมาก (Regional Income Award Poster)
     {
       size: "wide",
       node: (
         <ImageTile
-          src="/images/gallery/award-cert-presentation.webp"
-          alt="รางวัลเชิดชูเกียรติ นิสิตดีเด่น ด้านบำเพ็ญประโยชน์ มหาวิทยาลัยทักษิณ"
+          src="/projects/regional-income/01-award-poster.webp"
+          alt="โปสเตอร์นำเสนอผลงานวิจัยระดับดีมาก การประชุมวิชาการระดับชาติ วิทยาศาสตร์วิจัย ครั้งที่ 17"
         />
       ),
     },
+    // 12. ภาพกิจกรรม Style3 (6/7): กิจกรรมแลกเปลี่ยนเรียนรู้ในโครงการ TSU Discover Taiwan
     {
       size: "wide",
       node: (
         <ImageTile
-          src="/images/gallery/style3-pitching-05.webp"
-          alt="เวิร์กช็อป Taiwan Tech GTE-X Bootcamp ณ มหาวิทยาลัยเทคโนโลยีแห่งชาติไต้หวัน"
+          src="/images/gallery/style3-pitching-02.webp"
+          alt="กิจกรรมแลกเปลี่ยนเรียนรู้ในโครงการ TSU Discover Taiwan"
         />
       ),
     },
+    // 13. ป้ายข้อความ Data → Insights → Impact
     {
       size: "tall",
       node: (
@@ -97,48 +155,13 @@ export default function AboutHero() {
         </TextTile>
       ),
     },
-    {
-      size: "square",
-      node: (
-        <ImageTile
-          src="/images/gallery/style3-pitching-04.webp"
-          alt="ทีม Style3 ศึกษาดูงานระบบนิเวศสตาร์ทอัพ ณ ไต้หวัน"
-        />
-      ),
-    },
+    // 14. ภาพกิจกรรม Style3 (7/7): การระดมความคิดและออกแบบแนวทางแก้ไขปัญหาในเวิร์กช็อป
     {
       size: "wide",
       node: (
         <ImageTile
-          src="/images/gallery/style3-pitching-06.webp"
-          alt="การนำเสนอผลงานต้นแบบ Pitching บนเวที Bootcamp"
-        />
-      ),
-    },
-    {
-      size: "square",
-      node: (
-        <ImageTile
-          src="/images/gallery/style3-pitching-03.webp"
-          alt="การระดมสมองพัฒนา Business Model และ Prototype"
-        />
-      ),
-    },
-    {
-      size: "square",
-      node: (
-        <ImageTile
-          src="/images/gallery/style3-pitching-01.webp"
-          alt="กิจกรรม Teamwork และ Hands-on Challenge ใน Bootcamp"
-        />
-      ),
-    },
-    {
-      size: "wide",
-      node: (
-        <ImageTile
-          src="/images/gallery/style3-pitching-02.webp"
-          alt="กิจกรรมแลกเปลี่ยนเรียนรู้ในโครงการ TSU Discover Taiwan"
+          src="/images/gallery/style3-pitching-07.webp"
+          alt="การระดมความคิดและออกแบบแนวทางแก้ไขปัญหาในเวิร์กช็อป Taiwan Tech Bootcamp"
         />
       ),
     },
