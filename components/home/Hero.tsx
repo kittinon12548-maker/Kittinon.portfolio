@@ -152,38 +152,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        {/* Highlight Statistics Row */}
-        <div className="mt-16 pt-12 border-t border-[#E5E5E5]">
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#E5E5E5]">
-            <div className="py-6 first:pt-0 last:pb-0 md:py-0 md:px-6 text-center">
-              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight tabular-nums">
-                92.2%
-              </span>
-              <span className="block text-[13px] text-[#525252] mt-2">
-                ความแม่นยำโมเดลต้นแบบ PetGuard AI บน Test Set (4 คลาส)
-              </span>
-            </div>
-
-            <div className="py-6 first:pt-0 last:pb-0 md:py-0 md:px-6 text-center">
-              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight tabular-nums">
-                13 ปี
-              </span>
-              <span className="block text-[13px] text-[#525252] mt-2">
-                ข้อมูลภาครัฐที่ใช้วิเคราะห์
-              </span>
-            </div>
-
-            <div className="py-6 first:pt-0 last:pb-0 md:py-0 md:px-6 text-center">
-              <span className="block text-[48px] font-semibold text-[#111111] leading-none tracking-tight tabular-nums">
-                9,600+
-              </span>
-              <span className="block text-[13px] text-[#525252] mt-2">
-                รูปใน Dataset ฝึกโมเดล
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
