@@ -85,12 +85,12 @@ export default function Hero() {
 
           {/* Right Column: GPAX Widget & Vertical Social Link Pills */}
           <div className="flex flex-col items-start md:items-end md:col-span-3">
-            <div className="flex w-full flex-col md:w-auto md:min-w-[190px]">
+            <div className="flex w-full flex-col md:w-auto md:min-w-[210px]">
               {/* GPAX Card with Rotating Activities Title */}
               <div className="w-full rounded-2xl border border-[#E5E5E5] bg-white p-5 transition-colors hover:border-[#CCCCCC] mb-6">
                 <div className="flex items-center gap-1.5 text-[13px] font-semibold text-[#525252] uppercase tracking-wider">
                   <GraduationCap className="size-3.5 text-[#525252]" />
-                  <span>เกรดเฉลี่ยสะสม</span>
+                  <span>เกรดเฉลี่ยสะสม (GPAX)</span>
                 </div>
 
                 <div className="mt-2 flex items-baseline gap-1.5">

@@ -11,7 +11,7 @@ export const profile = {
   education: "สาขาวิชาวิทยาการคอมพิวเตอร์และสารสนเทศ (Data Science) ชั้นปีที่ 3",
   faculty: "คณะวิทยาศาสตร์และนวัตกรรมดิจิทัล",
   university: "มหาวิทยาลัยทักษิณ วิทยาเขตพัทลุง",
-  gpax: "3.18",
+  gpax: "3.30",
   location: "จ.ตรัง",
   timezone: "Asia/Bangkok",
   availability: "7 เม.ย. – ก.ย. 2570",
@@ -41,7 +41,7 @@ export const home = {
     line2: "& Power BI Specialist",
     sub: [
       "นิสิต Data Science ชั้นปีที่ 3",
-      "มหาวิทยาลัยทักษิณ (GPAX 3.18)",
+      "มหาวิทยาลัยทักษิณ (GPAX 3.30)",
       "พร้อมสำหรับการฝึกงานในตำแหน่ง Data Analyst",
       "ช่วง 7 เมษายน – กันยายน 2570",
     ],
@@ -64,7 +64,7 @@ export const about = {
   storySub:
     "เป้าหมายการฝึกงาน: ต้องการนำทักษะด้าน Python, SQL, Power BI, และ Machine Learning มาช่วยงานองค์กรในการจัดทำรายงาน Business Intelligence, วิเคราะห์ Insight สนับสนุนการตัดสินใจ และพัฒนาโซลูชันข้อมูล พร้อมเปิดรับการเรียนรู้วัฒนธรรมการทำงานจริงร่วมกับทีมงานมืออาชีพ ในช่วง 7 เมษายน ถึง กันยายน 2570",
   facts: [
-    { label: "เกรดเฉลี่ยสะสม", value: `${profile.gpax} / 4.00` },
+    { label: "เกรดเฉลี่ยสะสม (GPAX)", value: `${profile.gpax} / 4.00` },
     { label: "ช่วงฝึกงาน", value: profile.availabilityFull },
     { label: "สถาบันการศึกษา", value: `${profile.faculty} ${profile.university}` },
     { label: "ภูมิลำเนา", value: "อ.นาโยง จ.ตรัง" },
